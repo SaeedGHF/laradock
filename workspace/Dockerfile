@@ -1784,8 +1784,8 @@ RUN set -eux; \
 USER root
 
 # Permissions
-RUN chmod -R 777 storage && \
-    chmod -R 777 bootstrap/cache
+# RUN chmod -R 777 storage && \
+#    chmod -R 777 bootstrap/cache
 
 # Clean up
 RUN apt-get clean && \
