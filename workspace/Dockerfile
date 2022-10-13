@@ -1783,6 +1783,10 @@ RUN set -eux; \
 
 USER root
 
+# Permissions
+RUN chmod -R 777 storage && \
+    chmod -R 777 bootstrap/cache
+
 # Clean up
 RUN apt-get clean && \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* && \
